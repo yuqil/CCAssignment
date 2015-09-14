@@ -1,20 +1,19 @@
 
  
 public class Solution05 {
-
-    private class ListNode {
+    private static class Node {
         int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
+        Node next;
+        Node(int x) { val = x; }
     }
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static Node addTwoNumbers(Node l1, Node l2) {
         if (l1 == null && l2 == null) {
             return null;
         }
         
-        ListNode dummy = new ListNode(-1);
-        ListNode start = dummy;
+        Node dummy = new Node(-1);
+        Node start = dummy;
         int carry = 0;
         int sum = 0;
         
@@ -34,13 +33,13 @@ public class Solution05 {
                 sum -= 10;
             }
             
-            dummy.next = new ListNode(sum);
+            dummy.next = new Node(sum);
             dummy = dummy.next;
             sum = 0;
         }
         
         if (carry == 1) {
-            dummy.next = new ListNode(1);
+            dummy.next = new Node(1);
         }
         
         return start.next;

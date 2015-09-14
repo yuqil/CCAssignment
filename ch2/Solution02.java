@@ -1,8 +1,10 @@
-package LinkedListNode;
-
-import treeNode.Node;
-
 public class Solution02 {
+	public static class Node {
+		int val;
+		Node next;	
+		public Node(int x) { val = x; }
+	}
+
 	public static Node returnNth(Node n, int N) {
 		Node temp = n;
 		int len = 0;
@@ -22,16 +24,22 @@ public class Solution02 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Node n = new Node(0);
-		n.appendToTail(1);
-		n.appendToTail(2);
-		n.appendToTail(1);
-		n.appendToTail(0);
-		n.appendToTail(3);
-		n.appendToTail(2);
-		n.appendToTail(2);
+		Node start = n;
+		n.next = new Node(1);
+		n = n.next;
+		n.next = new Node(1);
+		n = n.next;
+		n.next = new Node(2);
+		n = n.next;
+		n.next = new Node(3);
+		n = n.next;
+		n.next = new Node(4);
+		n = n.next;
+		n.next = new Node(6);
+		n = n.next;
 		int N = 4;
-		Node temp = returnNth(n, N);
-		temp.print();
+		Node temp = returnNth(start, N);
+		System.out.println(temp.val);
 	}
 
 }

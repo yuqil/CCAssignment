@@ -1,8 +1,10 @@
-package LinkedListNode;
-
-import treeNode.Node;
-
 public class Solution08 {
+	public static class Node {
+		int val;
+		Node next;	
+		public Node(int x) { val = x; }
+	}
+
 	public static Node findLoop(Node n) {
 		if (n==null || n.next == null) return null;
 		Node n1 = n.next;
@@ -36,7 +38,7 @@ public class Solution08 {
 		n6.next = n7;
 		n1.next = n2;
 		Node r = findLoop(n1);
-		System.out.println(r.data);
+		System.out.println(r.val);
 	}
 
 }
