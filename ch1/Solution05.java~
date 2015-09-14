@@ -45,7 +45,6 @@ public class Solution05 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println((OneWay("abbcd", "abbcdd") == true? " true" : "false"));
-		System.out.println((OneWay("abbckd", "abbcdd") == true? " true" : "false"));
 	}
 
 }

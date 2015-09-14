@@ -37,7 +37,6 @@ public class Solution02 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println((checkPermulation("abc", "cbfa") == true? " true" : "false"));
-                System.out.println((checkPermulation("abc", "cab") == true? " true" : "false"));
 	}
 
 }

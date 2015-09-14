@@ -1,9 +1,6 @@
 
 public class Solution02 {
 	public static char[] URLify(String str1, int len) {
-		if (str1 == null) {
-			return new char[0];
-		}
 		int space = 0;
 		for (int i = 0; i < len ; i++) {
 			if (str1.charAt(i) == ' ') {
