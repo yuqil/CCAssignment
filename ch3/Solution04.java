@@ -1,3 +1,4 @@
+import java.util.*;
 class MyQueue {
     // Push element x to the back of queue.
     public Stack<Integer> stack1;
@@ -44,5 +45,17 @@ class MyQueue {
     // Return whether the queue is empty.
     public boolean empty() {
         return stack1.isEmpty() && stack2.isEmpty();
+    }
+}
+
+class Solution04 {
+    public static void main(String[] args) {
+        MyQueue queue = new MyQueue();
+        queue.push(1);
+        queue.push(2);
+        System.out.println(queue.peek());
+        queue.pop();
+        System.out.println(queue.peek());
+
     }
 }
