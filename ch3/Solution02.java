@@ -1,3 +1,20 @@
+import java.util.Stack;
+
+class Solution02 {
+    public static void main (String[] args) {
+        MinStack stack = new MinStack();
+        stack.push(5);
+        stack.push(6);
+        stack.push(8);
+        stack.push(9);
+        stack.push(3);
+        System.out.println(stack.top()); 
+        stack.pop();
+        stack.pop();
+        System.out.println(stack.getMin());
+    }
+}
+
 class MinStack {
     public Stack<Integer> stack;
     public Stack<Integer> min;
